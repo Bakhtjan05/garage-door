@@ -1,24 +1,31 @@
+
 const dropdown = document.getElementById('dropdown');
 const dropdownText = document.getElementById('dropdown-placeholder')
 
-function toggleDropdown(event) {
-    event.stopPropagation(); // Prevent the click event from bubbling up to the window
-    dropdown.classList.toggle('hidden');
+
+function toggleDropdown() {
+  event.stopPropagation();
+  dropdown.classList.toggle('hidden');
+ 
 }
+
+
 
 function selectItem(choice) {
-    dropdownText.innerHTML = choice;
-    // Hide the dropdown after selecting an item
-    dropdown.classList.add('hidden');
+  event.stopPropagation();
+  dropdownText.innerHTML = choice;
+  
+  dropdown.classList.add('hidden');
 
-
+  
 }
 
+
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-    if (!event.target.closest('.relative')) {
-        dropdown.classList.add('hidden');
-    }
+window.onclick = function (event) {
+
+  dropdown.classList.add('hidden');
+
 }
 
 
@@ -36,11 +43,43 @@ buttonsWrapper.addEventListener("click", e => {
     } else if (e.target.classList.contains("second")) {
       slides.style.transform = "translateX(-110%)";
       e.target.classList.add("active");
-    } else if (e.target.classList.contains('third')){
+    } else if (e.target.classList.contains('third')) {
       slides.style.transform = 'translateX(-212%)';
       e.target.classList.add('active');
     }
   }
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const indicators = document.querySelectorAll('.indicator');
+  const carousel = document.querySelector('.carousel');
+  const totalItems = document.querySelectorAll('.carousel-item').length;
+  let currentIndex = 0;
+
+  const showSlide = (index) => {
+    const slideWidth = 100 / (window.innerWidth <= 768 ? 1 : 3);
+    const offset = -index * slideWidth;
+    carousel.style.transform = `translateX(${offset}%)`;
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === index);
+    });
+  };
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentIndex = index;
+      showSlide(currentIndex);
+    });
+  });
+
+  // Initial display
+  showSlide(currentIndex);
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    showSlide(currentIndex);
+  });
 });
 
 

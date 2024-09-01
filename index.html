@@ -38,8 +38,8 @@
                 <img class="w-full h-full object-contain" src="/assets/images/cropped-logo-.webp" alt="">
             </div>
             <div class="flex-1 flex justify-center">
-                <button class="bg-[#F5711A] text-white py-3 px-11 rounded-xl text-2xl mt-6 font-bold">(720)
-                    800-9966</button>
+                <button
+                    class="bg-[#F5711A] text-white py-3 px-11 rounded-xl text-2xl mt-6 font-bold">303-872-2292</button>
             </div>
         </div>
     </header>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="mt-5">
                         <p>Servie Interested In *</p>
-                        <div class="relative w-full bg-[#E9E9E9] px-5 py-6 mt-2" onclick="toggleDropdown(event)">
+                        <div class="relative w-full bg-[#E9E9E9] px-5 py-6 mt-2" onclick="toggleDropdown()">
                             <p id="dropdown-placeholder">Select a service</p>
                             <div class="absolute right-5 top-1/2 -translate-y-1/2">
                                 <img class="w-3" src="assets/icons/caret-down-solid.svg" alt="Caret Down">
@@ -90,33 +90,19 @@
                                     onclick="selectItem('Garage Door Opener Repair')">Garage Door Opener Repair</div>
                                 <div class="dropdown-item cursor-pointer"
                                     onclick="selectItem('Garage Door Replacement')">Garage Door Replacement</div>
+                                <div class="dropdown-item cursor-pointer" onclick="selectItem('Other')">Other</div>
                             </div>
                         </div>
                     </div>
                     <div class="mt-5">
                         <p>Message</p>
-                        <input class="w-full h-20 bg-[#E9E9E9] px-5 py-3 mt-2" type="text" placeholder="">
-                    </div>
-                    <div class="flex gap-4 ps-3">
-                        <input type="checkbox">
-                        <p class="text-sm">I confirm that I want to receive content from this company using any contact
-                            information I provide.</p>
+                        <textarea class="w-full h-20 bg-[#E9E9E9] px-5 py-3  mt-2 " placeholder=""></textarea>
                     </div>
                     <div class="flex justify-center">
                         <button
                             class="bg-[#F5711A] text-white py-3 px-16 rounded-xl text-2xl mt-6 font-bold tracking-wider">SEND</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="partners mb-56">
-        <div class="container mx-auto">
-            <h1 class="text-center mt-12 text-[#F5711A] text-6xl max-md:text-4xl font-bold">Our Partners</h1>
-            <div class="flex">
-                <div></div>
-                <div></div>
-                <div></div>
             </div>
         </div>
     </div>
@@ -181,21 +167,286 @@
         <div class="absolute w-full h-full opacity-60 bg-[#B9B9B9]"></div>
         <div
             class="container mx-auto w-full h-full relative z-20 flex max-md:flex-col gap-24 max-md:gap-4 max-md:py-5 justify-center items-center px-5">
-            <h1 class="text-4xl max-md:text-2xl text-center overflow-hidden font-bold">Reliable Garage Door Repair Company <br
-                    class="max-xl:hidden"> Aurora CO</h1>
-            <button class="bg-[#F5711A] text-white py-3 px-11 rounded-xl text-2xl max-md:text-xl mt-6 font-bold">(720)
-                800-9966</button>
+            <h1 class="text-4xl max-md:text-2xl text-center overflow-hidden font-bold">Reliable Garage Door Repair
+                Company <br class="max-xl:hidden"> Aurora CO</h1>
+            <button
+                class="bg-[#F5711A] text-white py-3 px-11 rounded-xl text-2xl max-md:text-xl mt-6 font-bold">303-872-2292</button>
         </div>
     </div>
-    <div class="reviews mt-16 mb-56">
+    <div class="reviews mt-16 mb-16">
         <div class="container mx-auto px-5">
             <h2 class="text-3xl max-md:text-xl font-bold text-center">Reliable Garage Door Repair Company Aurora CO</h2>
             <h1 class="text-6xl max-md:text-4xl text-[#F5711A] font-bold text-center">See What Our Customers Says</h1>
+            <div class="mt-16">
+                <div class="flex items-center justify-center">
+                    <div>
+                        <img src="/assets/icons/icons8-google.svg" alt="">
+                    </div>
+                    <p class="text-2xl font-bold">5.0</p>
+                    <div class="w-8">
+                        <img class="w-full h-full object-contain" src="/assets/icons/star-svgrepo-com.svg" alt="">
+                    </div>
+                </div>
+                <p class="text-center mt-2"><span class="font-bold">829</span> Reviews</p>
+                <div class="flex">
+                    <div class="reviews-carousel mt-12">
+                        <div class="carousel-container">
+                          <div class="carousel">
+                            <div class="carousel-item flex">
+                                <div class="review flex flex-col flex-1 min-w-80 p-4">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Peter Gross</h4>
+                                            <p>24 August 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">I called and had someone at my house in probably just over an hour. Eli knew exactly what was wrong and fixed the issue quickly. All in all, it was a phenomenal customer experience. Would highly recommend Spark Garage.</textarea>
+                                    </div>
+                                </div>
+                                <div class="review flex flex-col flex-1 min-w-80 p-4 ">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed2.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Amy M</h4>
+                                            <p>11 August 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">I went online and asked for a quote, Eli got back to me almost right away and answered my call early the next day. He came out, gave me an honest quote and did the work the same day. R came out and did the job and everything went smooth, everyone was friendly,  professional, and there was no pressure. I would highly recommend!</textarea>
+                                    </div>
+                                </div>
+                                <div class="review flex flex-col flex-1 min-w-80 p-4 ">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed3.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Brenda Lott</h4>
+                                            <p>2 June 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">Ofir K was our technician. He texted prior to arrival as requested and was punctual.  A very honest and personable man. He diagnosed the issue with our garage door within a couple minutes and corrected the problem within 10 minutes.  The charge was very fair and we will use Spark for any future needs.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item flex">
+                                <div class="review flex flex-col flex-1 min-w-80 p-4">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed4.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Steven Vose</h4>
+                                            <p>25 August 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">They came promptly—within 30 minutes of calling—and were courteous and offered an estimate. It ended up being much higher than other companies, but I appreciated their professionalism.</textarea>
+                                    </div>
+                                </div>
+                                <div class="review flex flex-col flex-1 min-w-80 p-4 ">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed5.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Martin Schmitz</h4>
+                                            <p>13 June 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">Mark is the VERY BEST TECHNICIAN I have ever seen in 45 years of fine home building. I've been around hundreds of garage door installers and technicians. He's a PRO. Expert, Professional, Efficient, Very Personable. Right Tools. Right Attitude. We couldn't be happier. My relatives and friends agree 100%. Thanks Mark.</textarea>
+                                    </div>
+                                </div>
+                                <div class="review flex flex-col flex-1 min-w-80 p-4 ">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed6.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Darcy Truppo</h4>
+                                            <p>19 August 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">I was unexpectedly locked inside my garage when the spring broke on my garage door opener. I'm a realtor so I need my car! I actually googled garage door repair and found Spark. They were able to get to my house in less than an hour and the technician did the repairs promptly and efficiently. I'm going to add them to my referral list!</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item flex">
+                                <div class="review flex flex-col flex-1 min-w-80 p-4">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed7.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Bob Persichetti</h4>
+                                            <p>14 July 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">Eli was quick to get out to look at the issue we are having.  Unfortunately, the garage door operated just fine while he was there and therefore we couldn't resolve the issue.  There is definitely something wrong as multiple times a week the garage door just keeps reversing and will not close - then randomly starts working again without any adjustments, etc.?</textarea>
+                                    </div>
+                                </div>
+                                <div class="review flex flex-col flex-1 min-w-80 p-4 ">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed8.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Yashica Shaw</h4>
+                                            <p>29 August 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">Anthony came out promptly to fix the issue that I was having with my garage door. I appreciate your help!! I will definitely use Spark Garage Doors again.</textarea>
+                                    </div>
+                                </div>
+                                <div class="review flex flex-col flex-1 min-w-80 p-4 ">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed9.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Kurt Keipert</h4>
+                                            <p>1 September 2023 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">Excellent work and a pretty short lead time on ordering new garage doors. Mark was friendly and worked quickly replacing two old wooden garage doors with new steel ones. He showed me how to perform regular maintenance and made sure I was happy with the work. He was professional and courteous. I would highly recommend Spark!</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item flex">
+                                <div class="review flex flex-col flex-1 min-w-80 p-4">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed10.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Stella dominguez Dominguez</h4>
+                                            <p>27 August 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">Eli came with in an hour and had  the garage fixed in about 30 to45 minutes  did a great job and very friendly  and kind very knowledgeable  he knew exactly  want to do.
+                                            Thank You  Stella</textarea>
+                                    </div>
+                                </div>
+                                <div class="review flex flex-col flex-1 min-w-80 p-4 ">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed11.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Jason</h4>
+                                            <p>18 June 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">When my garage door malfunctioned they were able to come out the same day and fix it by replacing a broken spring, service was really fast, he was here less than an hour and had it completely resolved and for a great price. Highly recommend</textarea>
+                                    </div>
+                                </div>
+                                <div class="review flex flex-col flex-1 min-w-80 p-4 ">
+                                    <div class="flex items-center">
+                                        <div>
+                                            <img src="/assets/images/unnamed12.png" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div>
+                                            <h4 class="username text-base font-bold">Taylor Ortiz</h4>
+                                            <p>6 January 2024 г.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="w-24 h-6 mt-2">
+                                        <img class="w-full h-full object-cover" src="/assets/images/5-star.jpg" alt="">
+                                    </div>
+                                    <div class="review-text mt-4">
+                                        <textarea disabled class="w-full h-20">Michael promptly came over yesterday to take a look at our garage that had not been serviced in some time. He performed a full service on our garage door and components and even made some suggestions on some replacements, but wasn't pushy about it. He also gave me a quote for what it would look like to eventually change out our door motor to something updated and modern.
+
+                                            He was super professional and very kind. You can tell he just cares about doing great work. I am really glad we found Spark Garage Door repairs.</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                                         
+                          </div>
+                          <div class="carousel-indicators ">
+                            <button class="indicator active" data-slide="0"></button>
+                            <button class="indicator" data-slide="1"></button>
+                            <button class="indicator" data-slide="2"></button>
+                            <button class="indicator" data-slide="3"></button>
+                            <button class="indicator md:hidden" data-slide="4"></button>
+                            <button class="indicator md:hidden" data-slide="5"></button>
+                            <button class="indicator md:hidden" data-slide="6"></button>
+                            <button class="indicator md:hidden" data-slide="7"></button>
+                            <button class="indicator md:hidden" data-slide="8"></button>
+                            <button class="indicator md:hidden" data-slide="9"></button>
+                            <button class="indicator md:hidden" data-slide="10"></button>
+                            <button class="indicator md:hidden" data-slide="11"></button>
+                          </div>
+                        </div>
+                      </div>
+                    
+                    
+                </div>
+            </div>
         </div>
     </div>
     <div class="portfolio mb-24">
         <div class="container mx-auto px-12">
-            <h1 class="text-6xl max-md:text-4xl text-[#F5711A] font-bold text-center">Check Out Our Past Work For Garage Door</h1>
+            <h1 class="text-6xl max-md:text-4xl text-[#F5711A] font-bold text-center">Check Out Our Past Work For Garage
+                Door</h1>
             <div class="center mt-20">
                 <div class="wrapper">
                     <div class="inner">
@@ -249,10 +500,12 @@
     </div>
     <div class="certificate">
         <div class="container mx-auto px-12">
-            <h1 class="text-6xl max-md:text-4xl text-[#F5711A] font-bold text-center">Reliable Garage Door Repair Company Aurora CO</h1>
+            <h1 class="text-6xl max-md:text-4xl text-[#F5711A] font-bold text-center">Reliable Garage Door Repair
+                Company Aurora CO</h1>
             <h3 class="font-bold text-3xl max-md:text-2xl text-center mt-2">Call Garage Door Solutions Today!</h3>
             <div class="mt-8 flex justify-center">
-                <button class="bg-[#F5711A] text-white py-4 px-11 rounded-xl text-3xl max-md:text-2xl mt-6 font-bold">(720) 800-9966</button>
+                <button
+                    class="bg-[#F5711A] text-white py-4 px-11 rounded-xl text-3xl max-md:text-2xl mt-6 font-bold">303-872-2292</button>
             </div>
             <div class="flex justify-center items-center mt-6">
                 <div>
@@ -272,34 +525,28 @@
     </div>
     <div class="coupon bg-[#D9D9D9] mt-16 pt-16 max-md:mt-4">
         <div class="container mx-auto px-12">
-            <h1 class="text-6xl max-md:text-4xl text-[#F5711A] font-bold text-center">Reliable Garage Door Repair Company Aurora CO</h1>
-            <p class="mt-3 text-lg text-center">Hurry! Save an extra dollar using our money saving coupons. We value our customers for trusting in our services. That’s why we have introduced value adding coupons that offers irresistible discounts to our esteemed customers. To benefit, click on the coupon containing the offer you are interested in. Go for it One Coupon Per Customer.</p>
+            <h1 class="text-6xl max-md:text-4xl text-[#F5711A] font-bold text-center">Reliable Garage Door Repair
+                Company Aurora CO</h1>
+            <p class="mt-3 text-lg text-center">Hurry! Save an extra dollar using our money saving coupons. We value our
+                customers for trusting in our services. That’s why we have introduced value adding coupons that offers
+                irresistible discounts to our esteemed customers. To benefit, click on the coupon containing the offer
+                you are interested in. Go for it One Coupon Per Customer.</p>
             <div class="grid mt-24 grid-cols-3 gap-6 ">
                 <div class="cursor-pointer max-md:col-span-3">
-                    <img class="w-full h-full object-cover" src="/assets/images/coupon-10.webp" alt="">
+                    <img class="w-full h-full object-contain" src="/assets/images/coupon-10.webp" alt="">
                 </div>
                 <div class="cursor-pointer max-md:col-span-3">
-                    <img src="/assets/images/coupon-25.webp" alt="">
+                    <img class="w-full h-full object-contain" src="/assets/images/coupon-25.webp" alt="">
                 </div>
                 <div class="cursor-pointer max-md:col-span-3">
-                    <img src="/assets/images/coupon-150.webp" alt="">
+                    <img class="w-full h-full object-contain" src="/assets/images/coupon-150.webp" alt="">
                 </div>
-                <div class="cursor-pointer max-md:col-span-3">
-                    <img src="/assets/images/coupon-35.webp" alt="">
-                </div>
-                <div class="cursor-pointer max-md:col-span-3">
-                    <img src="/assets/images/coupon-free.webp" alt="">
-                </div>
-                <div class="cursor-pointer max-md:col-span-3">
-                    <img src="/assets/images/coupon-75.webp" alt="">
-                </div>
-                <div class="col-span-3 flex justify-center cursor-pointer">
-                    <img src="/assets/images/coupon-85.webp" alt="">
-                </div>
-                
+
+
             </div>
         </div>
-        <p class="container mx-auto px-12 mt-16 text-center">Copyright © 2023 Garage Door Solutions, all rights reserved.</p>
+        <p class="container mx-auto px-12 mt-16 text-center">Copyright © 2023 Garage Door Solutions, all rights
+            reserved.</p>
     </div>
 
 
