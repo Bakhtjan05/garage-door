@@ -128,17 +128,21 @@
 
 .carousel-container {
   position: relative;
+  overflow-x: auto; /* Включаем горизонтальную прокрутку */
+  scroll-snap-type: x mandatory; /* Добавляем эффект закрепления */
+  -webkit-overflow-scrolling: touch; /* Поддержка плавной прокрутки на iOS */
 }
 
 .carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 300%;
+  width: max-content;
 }
 
 .carousel-item {
-  flex: 0 0 33.3333%; /* Show 3 items on large screens */
+  flex: 0 0 33.3333%; /* Для больших экранов показываем 3 блока */
   box-sizing: border-box;
+  scroll-snap-align: start; /* Закрепление блоков */
+  padding: 18px;
 }
 
 .review {
@@ -197,8 +201,8 @@
   background-color: #bbb;
   border: none;
   border-radius: 50%;
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   margin: 0 4px;
   cursor: pointer;
   outline: none;

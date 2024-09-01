@@ -56,6 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const carousel = document.querySelector('.carousel');
   const totalItems = document.querySelectorAll('.carousel-item').length;
   let currentIndex = 0;
+  let startX = 0;
+  let endX = 0;
 
   const showSlide = (index) => {
     const slideWidth = 100 / (window.innerWidth <= 768 ? 1 : 3);
@@ -71,6 +73,25 @@ document.addEventListener('DOMContentLoaded', () => {
       currentIndex = index;
       showSlide(currentIndex);
     });
+  });
+
+  // Handle touch events for swipe
+  carousel.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener('touchend', () => {
+    const threshold = 50; // Минимальное расстояние для распознавания свайпа
+    if (startX - endX > threshold) {
+      currentIndex = Math.min(currentIndex + 1, totalItems - 1); // Свайп влево
+    } else if (endX - startX > threshold) {
+      currentIndex = Math.max(currentIndex - 1, 0); // Свайп вправо
+    }
+    showSlide(currentIndex);
   });
 
   // Initial display
